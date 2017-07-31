@@ -41,8 +41,8 @@ mean_steps<-mean(summ$a_sum)
 median_steps<-median(summ$a_sum)
 ```
 
-The mean number of steps per day is `mean_steps`.
-The median nunmber of steps per day is `median_steps`.
+The mean number of steps per day is `r mean_steps`.
+The median nunmber of steps per day is `r median_steps`.
 
 
 ## Average daily activity pattern
@@ -55,7 +55,7 @@ max_int<-max(steps_int)
 name_max_int<-names(steps_int[steps_int=max_int])
 ```
 
-The 5-minute interval corresponding to the maximum number of steps is `nam_max_int`.
+The 5-minute interval corresponding to the maximum number of steps is `r name_max_int`.
 
 
 ## Imputing missing values
@@ -81,9 +81,9 @@ median_steps_new<-median(summ_new$a_sum_new)
 
 ```
 
-The total number of missing values is `miss_tot`.
-The mean number of steps per day after filling the NA values is `mean_steps_new`, while the original one was `mean_steps`. Fillinig the missing data has increased the mean value per day. 
-The median nunmber of steps per day after filling the NA values is `median_steps_new`, while the orginale one was `median_steps`. In this case, both values ar the same
+The total number of missing values is `r miss_tot`.
+The mean number of steps per day after filling the NA values is `r mean_steps_new`, while the original one was `r mean_steps`. Fillinig the missing data has increased the mean value per day. 
+The median nunmber of steps per day after filling the NA values is `r median_steps_new`, while the orginale one was `r median_steps`. In this case, both values ar the same
 
 
 ## Differences in activity patterns between weekdays and weekends

@@ -40,6 +40,32 @@ data$date<-as.Date(as.character(data$date), format="%Y-%m-%d")
 
 ```r
 library(dplyr)
+```
+
+```
+## 
+## Attaching package: 'dplyr'
+```
+
+```
+## The following objects are masked from 'package:lubridate':
+## 
+##     intersect, setdiff, union
+```
+
+```
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+```
+
+```r
 df<-tbl_df(data)
 str(df)
 ```
@@ -68,8 +94,8 @@ mean_steps<-mean(summ$a_sum)
 median_steps<-median(summ$a_sum)
 ```
 
-The mean number of steps per day is `mean_steps`.
-The median nunmber of steps per day is `median_steps`.
+The mean number of steps per day is 9354.2295082.
+The median nunmber of steps per day is 10395.
 
 
 ## Average daily activity pattern
@@ -87,7 +113,7 @@ max_int<-max(steps_int)
 name_max_int<-names(steps_int[steps_int=max_int])
 ```
 
-The 5-minute interval corresponding to the maximum number of steps is `nam_max_int`.
+The 5-minute interval corresponding to the maximum number of steps is 1705.
 
 
 ## Imputing missing values
@@ -118,9 +144,9 @@ mean_steps_new<-mean(summ_new$a_sum_new)
 median_steps_new<-median(summ_new$a_sum_new)
 ```
 
-The total number of missing values is `miss_tot`.
-The mean number of steps per day after filling the NA values is `mean_steps_new`, while the original one was `mean_steps`. Fillinig the missing data has increased the mean value per day. 
-The median nunmber of steps per day after filling the NA values is `median_steps_new`, while the orginale one was `median_steps`. In this case, both values ar the same
+The total number of missing values is 2304.
+The mean number of steps per day after filling the NA values is 1.0766189 &times; 10<sup>4</sup>, while the original one was 9354.2295082. Fillinig the missing data has increased the mean value per day. 
+The median nunmber of steps per day after filling the NA values is 1.0766189 &times; 10<sup>4</sup>, while the orginale one was 10395. In this case, both values ar the same
 
 
 ## Differences in activity patterns between weekdays and weekends
